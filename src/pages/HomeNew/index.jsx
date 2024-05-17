@@ -8,7 +8,7 @@ import ArrowDown from '@/assets/icon/arrowDown';
 import icon from '@/assets/icon/备案图标.png';
 import Page1 from './components/page1';
 import Page2 from './components/page2';
-import Page3 from './components/page3';
+import Page3 from './components/page31';
 import Page4 from './components/page4';
 
 import {HomeContainer} from './style'
@@ -20,11 +20,11 @@ export default memo(() => {
   const [messageApi, contextHolder] = message.useMessage();
   useEffect(()=>{
   // 添加滚动事件监听器  
-  const carouselEl = document.getElementById('carousel');
-  carouselEl.addEventListener('mousewheel',(e) => handleScroll(e));  
-  return () =>{
-    carouselEl.removeEventListener('mousewheel',(e) => handleScroll(e));
-  }
+  // const carouselEl = document.getElementById('carousel');
+  // carouselEl.addEventListener('mousewheel',(e) => handleScroll(e));  
+  // return () =>{
+  //   carouselEl.removeEventListener('mousewheel',(e) => handleScroll(e));
+  // }
   },[])
   const handleScroll = (e) =>{
     const delta = e.wheelDeltaY > 0 ? -1 : 1; // 判断滚动的方向  
@@ -65,7 +65,12 @@ export default memo(() => {
   // 下一面板
   const nextPanel = () =>{
       CarouseRef.current.next();
+      if(currentRef.current === 3) {
+        currentRef.current = 0;
+      }else {
       currentRef.current += 1;
+
+      }
   }
   // 上一面板
   const prevPanel = () =>{
@@ -81,7 +86,7 @@ export default memo(() => {
           <Page4></Page4>
         </Carousel>
         {
-          currentRef.current !== 3 && <div className='arrowDownBox' onClick={nextPanel}>
+          <div className='arrowDownBox' onClick={nextPanel}>
           <ArrowDown style={{width:'2.5rem',height:'2.5rem'}}/>
           </div>
         }

@@ -2,18 +2,20 @@ import styled from 'styled-components';
 
 export const Page4DetailWrapper = styled.div`
     width:100%;
-    height:100%;
+    height:60%;
     display:flex;
+    flex-direction:column;
     align-items:center;
-    position:absolute;
-    top:0;
-    left:0;
+    overflow-y:auto;
     }
-    .left {
-        width:25%;
+    .img {
+        width:100%;
+        display:flex;
+        justify-content:center;
+        flex-shink:1;
     }
-    .right {
-        flex:1;
+    .text {
+        width:100%;
         .title {
             font-size:1.3rem;
             font-weight:bold;
@@ -21,7 +23,6 @@ export const Page4DetailWrapper = styled.div`
 
         }
         .overview {
-            margin:0.8rem 0;
             font-size:1rem;
             text-indent:2em;
         }

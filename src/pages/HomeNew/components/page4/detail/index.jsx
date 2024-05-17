@@ -5,32 +5,34 @@ import { Page4DetailWrapper } from './style';
 export default memo((props) => {
   return (
     <Page4DetailWrapper>
-      <div className='left'>
-        {
-          props.img.map(item => {
-            return <Image
-            width={'12.5rem'}
-            height={'12.5rem'}
-            style={{objectFit:'cover'}}
-            src={item}
-          />
-          })
-        }
-      </div>
-      <div className='right'>
+      
+      <div className='text'>
         <div className='title'>
            {props.name}
         </div>
         <p className='overview'>
           {props.overview}
         </p>
-        <ul className='participation'>
+        <div className='img'>
+        {
+          props.img.map(item => {
+            return <Image
+            key={item}
+            width={'9rem'}
+            height={'9rem'}
+            style={{objectFit:'cover'}}
+            src={item}
+          />
+          })
+        }
+      </div>
+        <div className='participation'>
             {
-            props.content && props.content.map(item =>{
-              return <li key={item}>{item}</li>
+            props.content && props.content.map((item,index) =>{
+              return <p key={item}>{index+1 + '.' + item}</p>
             })
             }
-        </ul>
+        </div>
         <div className='skills'>
           {
             props.skills.map(item =>{

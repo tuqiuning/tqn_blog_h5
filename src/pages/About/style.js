@@ -3,8 +3,8 @@ export const AboutWrapper = styled.div`
     box-sizing:border-box;
     width:100%;
     // height:calc(100vh - 3.75rem);
-    height:100vh;
-    padding-top:3.75rem;
+    // height:100vh;
+    padding:3.75rem 0;
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
@@ -13,8 +13,8 @@ export const AboutWrapper = styled.div`
     .aboutItem {
         position:relative;
         margin-top:3.125rem;
-        width:18.75rem;
-        height:18.75rem;
+        width:15.75rem;
+        height:15.75rem;
         background-color:#fff;
         display:flex;
         justify-content:center;

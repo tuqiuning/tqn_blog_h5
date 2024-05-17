@@ -39,14 +39,14 @@ export default memo(() => {
           {
             projectList[language].map((item, index) => {
               return (
-                <>
+                <div>
                   {
                     <CSSTransition in={showIndex === index} unmountOnExit={true} classNames='projectTransition' timeout={500}>
                       <Detail {...item}></Detail>
                     </CSSTransition>
 
                   }
-                </>
+                </div>
               )
             })
           }

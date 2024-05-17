@@ -15,7 +15,7 @@ export const HeaderWrapper = styled.header`
     .header-left {
         width:50%;
         // font-family: ${props => props.$language === 'zh-CN' ? '':'douyuFont'};
-        font-size:1.5rem;
+        font-size:1.2rem;
         // font-weight:bold;
         cursor:pointer;
         display:flex;

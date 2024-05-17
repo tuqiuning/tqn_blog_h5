@@ -82,7 +82,7 @@ export default memo(({ type }) => {
         </div>
         {
           type === 'WECHAT' ? <Image
-            style={{ marginBottom: '1.25rem',width:'10rem',height:'10rem' }}
+            style={{ marginBottom: '1.25rem',width:'7rem',height:'7rem' }}
             // width={160}
             // height={160}
             src={qrcode}

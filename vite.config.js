@@ -21,8 +21,8 @@ export default defineConfig({
     host:'0.0.0.0',
     proxy: {
       "/api": {
-        target: "http://192.168.10.60:8080/coordination",
-        changeOrigin: true,
+        target: "http://www.tuqiuning.cn",
+        changeOrigin: true, // 允许跨域
       },
     },
   },

@@ -15,11 +15,13 @@ export const Page1Wrapper = styled.div`
     .motto {
         border-bottom:1px solid #fff;
         padding:0 1.25rem 0.625rem 1.875rem;
-        font-size:1.625rem;
+        font-size:1.4rem;
         font-weight:bold;
     }
     .row {
         display:flex;
+        justify-content:center;
+        flex-wrap:wrap;
         margin-top:1.25rem;
         margin-bottom:1.25rem;
         font-size:1.25rem;

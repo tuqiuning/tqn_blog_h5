@@ -30,10 +30,14 @@ export default memo(() => {
         <span >{overviewData[language].address}</span>
       </div>
       <div className='row'>
-        <SchoolSVG style={{paddingTop:'0.125rem',marginRight:'0.31rem',width:'1.56rem',height:'1.56rem'}}/>
+        <div>
+        <SchoolSVG style={{position:'relative',top:'0.125rem',marginRight:'0.31rem',width:'1.56rem',height:'1.56rem'}}/>
         <span className='row-left'>{overviewData[language].school}</span>
-        <EduSVG style={{paddingTop:'0.125rem',marginRight:'0.125rem',width:'1.56rem',height:'1.56rem'}}/>
+        </div>
+        <div>
+        <EduSVG style={{position:'relative',top:'0.225rem',marginRight:'0.125rem',width:'1.56rem',height:'1.56rem'}}/>
         <span>{overviewData[language].educational}</span>
+        </div>
       </div>
       <div className='row'>
         <MailOutlined style={{ fontSize: "1.25rem", marginRight: '0.31rem', paddingTop: '0.25rem' }} />

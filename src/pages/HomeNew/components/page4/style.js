@@ -17,9 +17,7 @@ export const Page4Wrapper = styled.div`
         justify-content:center;
         .content {
             position:relative;
-            width:80%;
-            margin:0 1.875rem;
-            overflow:hidden;
+            flex:1;
             > .title {
                 font-size:1.5rem;
                 font-weight:bold;

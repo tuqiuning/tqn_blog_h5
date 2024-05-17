@@ -15,7 +15,7 @@ export const projectList = {
             img: [xietong,xietong_mobile],
             overview: '本项目是中信集团用于集团内部开展协同业务及协同管理工作的平台。支持子公司、区域分会提升协同质效，加强内部合作，服务外部客户。该项目 包含企业微信端和网页端，主要模块有：客户拜访、协同需求、协同活动、分会管理等。',
             skills: ['React','Ant Design','Taro','NutUI','WebSocket'],
-            content: [,
+            content: [
                 '开发及维护系统核心模块-客户拜访，完成发起人、参与人、审批人在各种审批状态下的页面展示、逻辑处理。',
                 '完成消息、待办功能，使用WebSocket实时获取数据，点击消息跳转到相应模块页面。',
                 '完成用户使用时长的埋点，利用Vuex和localStorage保存菜单名和后端返回的页面id。',
