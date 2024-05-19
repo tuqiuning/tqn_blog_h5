@@ -49,10 +49,6 @@ export default memo(() => {
   const [form] = Form.useForm();
   const onFinish = (values) => {
     if (!values.message) {
-      // messageApi.open({
-      //   type: 'error',
-      //   content: language === 'en-US' ? 'Please enter your message' :'请输入你的留言'
-      // });
       notification.error({
         message: language === 'en-US' ? 'Please enter your message' : '请输入你的留言',
       })

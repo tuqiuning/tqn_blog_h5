@@ -22,6 +22,9 @@ export default defineConfig({
     proxy: {
       "/api": {
         target: "http://www.tuqiuning.cn",
+        pathRewrite: {
+          '^/api': ''
+        },
         changeOrigin: true, // 允许跨域
       },
     },

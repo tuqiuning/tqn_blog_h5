@@ -8,7 +8,7 @@ import ArrowDown from '@/assets/icon/arrowDown';
 import icon from '@/assets/icon/备案图标.png';
 import Page1 from './components/page1';
 import Page2 from './components/page2';
-import Page3 from './components/page31';
+import Page3 from './components/page3';
 import Page4 from './components/page4';
 
 import {HomeContainer} from './style'

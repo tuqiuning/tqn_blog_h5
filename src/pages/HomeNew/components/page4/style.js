@@ -17,7 +17,7 @@ export const Page4Wrapper = styled.div`
         justify-content:center;
         .content {
             position:relative;
-            flex:1;
+            width:80%;
             > .title {
                 font-size:1.5rem;
                 font-weight:bold;
@@ -44,7 +44,7 @@ export const Page4Wrapper = styled.div`
         
         .btnBox {
             height:100%;
-            width:3.125rem;
+            width:10%;
             display:flex;
             justify-content:center;
             align-items:center;

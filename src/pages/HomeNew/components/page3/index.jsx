@@ -1,14 +1,21 @@
-import React, { memo } from 'react';
-import { ConfigProvider, Timeline } from 'antd';
+import React, { memo, useEffect } from 'react';
+import { ConfigProvider, Timeline,Image } from 'antd';
+import { ClockCircleOutlined } from '@ant-design/icons';
 import { useSelector } from 'react-redux';
 import { title,companyData } from './data'
 import { Page3Wrapper } from './style';
+import axios from 'axios';
+import shangyouLogo from '@/assets/icon/shangyou.png';
+import tuoliangfeng from '@/assets/icon/托良峰.png'
 
 
 export default memo(() => {
   const { language } = useSelector((state) => {
     return state.system
   })
+  useEffect(()=>{
+    
+  },[])
 
   const toWebsite = (link) => {
     window.open(link)
@@ -72,24 +79,31 @@ export default memo(() => {
   return (
     <Page3Wrapper>
        <div className='title'>{title[language]}</div>
-      <ConfigProvider
-        // 修改Timeline的轴线样式
-        theme={{
-          components: {
-            Timeline: {
-              tailColor: '#fff',
-              tailWidth: 5,
-              dotBg:'transparent',
+       <div className='content'>
+        {
+       companyData[language].map((item,index) =>{
+        return <>
+          <div className='top'>
+            <div className={index === 1 ?'left logo1':'left logo2'}>
+            
+            </div>
+            <div className="right">
+              <div className="company">{item.title}</div>
+              <div className="duration">{item.duration}</div>
+            </div>
+          </div>
+          <div className="workContent">
+            {
+              item.dutys.map((duty, index) => {
+                return <div key={index} className='item'>{index+1 + '. ' + duty}</div>
+              })
             }
-          }
-        }}
-      >
-        
-        <Timeline
-          mode='left'
-          items={items}
-        />
-      </ConfigProvider>
+          </div>
+        </>
+       })
+
+        }
+       </div>
     </Page3Wrapper>
   )
 })
