@@ -84,7 +84,7 @@ export default memo(() => {
        companyData[language].map((item,index) =>{
         return <>
           <div className='top'>
-            <div className={index === 1 ?'left logo1':'left logo2'}>
+            <div className={index === 1 ?'left logo1':'left logo2'} onClick={() => toWebsite(item.link)}>
             
             </div>
             <div className="right">
