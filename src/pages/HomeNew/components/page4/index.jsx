@@ -1,4 +1,4 @@
-import React, { memo, useState } from 'react';
+import React, { Fragment, memo, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import Detail from './detail/index';
 import { useSelector } from 'react-redux';
@@ -39,14 +39,14 @@ export default memo(() => {
           {
             projectList[language].map((item, index) => {
               return (
-                <>
+                <Fragment key={item.name}>
                   {
                     <CSSTransition in={showIndex === index} unmountOnExit={true} classNames='projectTransition' timeout={500}>
                       <Detail {...item}></Detail>
                     </CSSTransition>
 
                   }
-                </>
+                </Fragment>
               )
             })
           }

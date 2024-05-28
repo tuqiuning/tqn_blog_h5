@@ -1,7 +1,6 @@
 import styled from "styled-components";
 export const Container =  styled.div`
-    color:${props => {console.log(props.$navTextColor);
-      return  props.$navTextColor}};
+    color:${props => props.$navTextColor};
     position: relative;
     display:flex;
     .rotateContainer {
@@ -91,16 +90,19 @@ export const Container =  styled.div`
     .active {
         color:#1677ff;
     }
-    .tabs-modal {
-        background-color:#000;
+    
+    .nav-modal {
+        position:absolute;
+        top:24px;
+        right:24px;
+        padding:10px 20px;
+        background-color:#dcdcdc;
+        border-radius:4px;
         list-style:none;
-        padding-top:0.625rem;
-        padding-bottom:1px;
-        padding-left:1.875rem;
-        li {
-            margin-bottom:0.625rem;
-            
-        } 
+            li {
+                margin-bottom:0.625rem;
+                white-space:nowrap;
+            } 
     }
     
 `

@@ -9,7 +9,7 @@ export const HeaderWrapper = styled.header`
     top:0.625rem;
     display:flex;
     justify-content:space-between;
-    padding:0.625rem 2.5rem 0.625rem 1.25rem;
+    padding:0.625rem 1rem 0.625rem 1.25rem;
     background-color:transparent;
     color:${props => props.$logoColor};
     .header-left {

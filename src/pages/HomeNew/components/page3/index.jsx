@@ -1,4 +1,4 @@
-import React, { memo, useEffect } from 'react';
+import React, { Fragment, memo, useEffect } from 'react';
 import { ConfigProvider, Timeline,Image } from 'antd';
 import { ClockCircleOutlined } from '@ant-design/icons';
 import { useSelector } from 'react-redux';
@@ -82,7 +82,7 @@ export default memo(() => {
        <div className='content'>
         {
        companyData[language].map((item,index) =>{
-        return <>
+        return <Fragment key={item.link}>
           <div className='top'>
             <div className={index === 1 ?'left logo1':'left logo2'} onClick={() => toWebsite(item.link)}>
             
@@ -99,7 +99,7 @@ export default memo(() => {
               })
             }
           </div>
-        </>
+        </Fragment>
        })
 
         }
